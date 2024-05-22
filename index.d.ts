@@ -1,16 +1,12 @@
 import { INotion, ITriple } from 'nagu-triples-types';
 
 export interface IAnnotations {
-  label: string|INotion<string>,
-  comment: string|INotion<string>,
-  seeAlso: string|INotion<string>,
+  label?: string|INotion<string>,
+  comment?: string|INotion<string>,
+  isDefinedBy?: string|INotion<string>|IRdfsResource,
+  seeAlso?: string|INotion<string>,
   getAnnotations(): Promise<IAnnotations>,
-  setAnnotations(annotations: {
-    label?: string|INotion<string>,
-    comment?: string|INotion<string>,
-    isDefinedBy?: string|INotion<string>,
-    seeAlso?: string|INotion<string>,
-  }): Promise<void>,
+  setAnnotations(annotations: IAnnotations): Promise<void>,
 }
 
 export interface IRdfsResource extends IAnnotations {
