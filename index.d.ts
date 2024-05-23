@@ -3,11 +3,10 @@ import { INotion, ITriple } from 'nagu-triples-types';
 export type AnnotationProps = {
   label?: string|INotion<string>,
   comment?: string|INotion<string>,
-  isDefinedBy?: string|INotion<string>|RdfsResourceProps,
+  isDefinedBy?: string|INotion<string>|RdfsResourceProps|RdfsResourceProps & AnnotationProps|RdfsResourceProps,
   seeAlso?: string|INotion<string>,
 }
-export interface IAnnotations {
-  iri: string|INotion<string>
+export interface IAnnotations extends RdfsResourceProps{
   getAnnotations(): Promise<AnnotationProps>,
   setAnnotations(annotations: AnnotationProps): Promise<void>,
 }

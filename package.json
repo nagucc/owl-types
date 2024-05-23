@@ -1,6 +1,6 @@
 {
   "name": "nagu-owl-types",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "应用于OWL项目的types",
   "main": "index.ts",
   "types": "index.d.ts",
