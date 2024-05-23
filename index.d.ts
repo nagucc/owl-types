@@ -7,6 +7,7 @@ export type AnnotationProps = {
   seeAlso?: string|INotion<string>,
 }
 export interface IAnnotations {
+  iri: string|INotion<string>
   getAnnotations(): Promise<AnnotationProps>,
   setAnnotations(annotations: AnnotationProps): Promise<void>,
 }
