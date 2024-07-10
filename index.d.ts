@@ -22,7 +22,7 @@ export interface IRdfsResource extends IAnnotations, AnnotationProps, RdfsResour
   addType (type: IRdfsResource|INotion<string>|string): Promise<ITriple>,
   removeType (type: IRdfsResource|INotion<string>|string): Promise<number>,
   init(): Promise<void>,
-  destroy(): Promise<void>,
+  destroy(): Promise<number>,
 }
 
 export interface IRdfsClass {
